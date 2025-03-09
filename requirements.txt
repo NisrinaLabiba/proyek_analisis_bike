@@ -1,8 +1,5 @@
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sn
-from sklearn.cluster import KMeans
-from sklearn.preprocessing import StandardScaler
-from statsmodels.tsa.seasonal import seasonal_decompose
-from statsmodels.tsa.arima.model import ARIMA
+matplotlib==3.10.1
+numpy==2.2.3
+pandas==2.2.3
+seaborn==0.13.2
+streamlit==1.43.0
