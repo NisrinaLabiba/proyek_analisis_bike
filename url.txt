@@ -1,1 +1,1 @@
-http://localhost:8501/
+https://erxwmbun96b7xz7xfe29l8.streamlit.app/
