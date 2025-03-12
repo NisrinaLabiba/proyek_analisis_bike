@@ -8,8 +8,8 @@ from statsmodels.tsa.seasonal import seasonal_decompose
 from statsmodels.tsa.arima.model import ARIMA
 
 # Load datasets
-day_df = pd.read_csv("day.csv")
-hour_df = pd.read_csv("hour.csv")
+day_df = pd.read_csv("data/day.csv")
+hour_df = pd.read_csv("data/hour.csv")
 
 day_df['dteday'] = pd.to_datetime(day_df['dteday'])
 day_df.set_index('dteday', inplace=True)
