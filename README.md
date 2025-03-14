@@ -2,5 +2,5 @@
 
 ## Run steamlit app
 ```
-streamlit run dashboardku.py
+streamlit run dashboard.py
 ```
