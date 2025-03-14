@@ -6,5 +6,5 @@
 
 ## Run steamlit app
 ```
-streamlit run dashboard.py
+python -m streamlit run dashboard.py
 ```
