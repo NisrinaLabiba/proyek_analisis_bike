@@ -74,7 +74,7 @@ plt.figure(figsize=(8,5))
 sn.barplot(x=filtered_day_df['workingday_label'], y=filtered_day_df['cnt'], errorbar=None)
 plt.xlabel("Hari")
 plt.ylabel("Total Peminjaman Sepeda")
-plt.title("Peminjaman Sepeda pada Hari Kerja vs Akhir Pekan")
+plt.title("Peminjaman Sepeda pada Hari Kerja dan Akhir Pekan")
 st.pyplot(plt)
 
 # Pola Peminjaman Jam Kerja
