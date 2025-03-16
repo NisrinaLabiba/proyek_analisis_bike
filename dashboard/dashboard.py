@@ -15,7 +15,7 @@ day_df['dteday'] = pd.to_datetime(day_df['dteday'])
 day_df.set_index('dteday', inplace=True)
 
 # Mapping musim ke label yang lebih mudah dipahami
-season_labels = {1: "Semi", 2: "Panas", 3: "Gugur", 4: "Dingin"}
+season_labels = {1: "Dingin", 2: "Semi", 3: "Panas", 4: "Gugur"}
 day_df['season_label'] = day_df['season'].map(season_labels)
 
 # Mapping hari kerja
@@ -64,7 +64,7 @@ st.write("### Tren Musiman")
 plt.figure(figsize=(8,5))
 sn.barplot(x=filtered_day_df['season_label'], y=filtered_day_df['cnt'], errorbar=None)
 plt.xlabel("Musim")
-plt.ylabel("Jumlah Peminjaman")
+plt.ylabel("Total Peminjaman Sepeda")
 plt.title("Rata-rata Peminjaman Sepeda per Musim")
 st.pyplot(plt)
 
@@ -72,8 +72,8 @@ st.pyplot(plt)
 st.write("### Hari Kerja vs Akhir Pekan")
 plt.figure(figsize=(8,5))
 sn.barplot(x=filtered_day_df['workingday_label'], y=filtered_day_df['cnt'], errorbar=None)
-plt.xlabel("Kategori Hari")
-plt.ylabel("Jumlah Peminjaman")
+plt.xlabel("Hari")
+plt.ylabel("Total Peminjaman Sepeda")
 plt.title("Peminjaman Sepeda pada Hari Kerja vs Akhir Pekan")
 st.pyplot(plt)
 
@@ -82,7 +82,7 @@ st.write("### Pola Peminjaman Jam Kerja")
 plt.figure(figsize=(10,5))
 sn.barplot(x=hour_df['hr'], y=hour_df['cnt'], errorbar=None)
 plt.xlabel("Jam")
-plt.ylabel("Jumlah Peminjaman")
+plt.ylabel("Total Peminjaman Sepeda")
 plt.title("Distribusi Peminjaman Sepeda per Jam")
 st.pyplot(plt)
 
@@ -122,7 +122,7 @@ plt.figure(figsize=(10,5))
 plt.plot(filtered_day_df.index, filtered_day_df['cnt'], label='Actual')
 plt.plot(test.index, forecast, label='Predicted', color='red')
 plt.xlabel("Tanggal")
-plt.ylabel("Jumlah Peminjaman")
+plt.ylabel("Total Peminjaman Sepeda")
 plt.title("Prediksi Peminjaman Sepeda dengan ARIMA")
 plt.legend()
 st.pyplot(plt)
